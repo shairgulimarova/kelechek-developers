@@ -3,7 +3,15 @@
  */
 module.exports = {
   siteMetadata: {
+    title: 'kelechek-developers', 
     siteUrl: `https://www.yourdomain.tld`,
   },
-  plugins: [],
+  plugins: [`gatsby-plugin-sass`, 
+  {
+    resolve: "gatsby-source-filesystem",
+    options: {
+      name: `projects`,
+      path: `${__dirname}/kelechek-developers/projects`,
+    }
+  },],
 }
