@@ -21,7 +21,7 @@ body {
   margin: 0 auto;
 }
 .main{
-  margin-top: 100px;
+  margin-top: 40px;
 }
 
 .navbar_inner{
@@ -68,5 +68,10 @@ body {
   font-size: 1.2em;
 }
 
+.article{
+  display: flex;
+  justify-content: space-between;
+  color: white; 
+}
 
   

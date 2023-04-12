@@ -13,5 +13,7 @@ module.exports = {
       name: `projects`,
       path: `${__dirname}/kelechek-developers/projects`,
     }
-  },],
+  },
+ 'gatsby-plugin-mdx',
+],
 }
