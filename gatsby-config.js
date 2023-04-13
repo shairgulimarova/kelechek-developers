@@ -10,9 +10,16 @@ module.exports = {
   {
     resolve: "gatsby-source-filesystem",
     options: {
-      name: `projects`,
-      path: `${__dirname}/kelechek-developers/projects`,
+      name: `mylist`,
+      path: `${__dirname}/kelechek-developers/mylist`,
     }
+  },
+  {
+    resolve: `gatsby-plugin-page-creator`,
+    options: {
+      path: `${__dirname}/src/pages`,
+      ignore: [`foo-bar.js`],
+    },
   },
  'gatsby-plugin-mdx',
 ],
