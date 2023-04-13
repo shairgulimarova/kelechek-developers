@@ -3,19 +3,22 @@ import * as React from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from '../../components/layout'
 import Seo from '../../components/seo'
+import {article} from '../../components/layout.module.scss'
+import {page} from '../../components/layout.module.scss'
+import {complDate} from '../../components/layout.module.scss'
 
 const BlogPage = ({ data }) => {
   return (
-    <Layout pageTitle="My Blog Posts">
+    <Layout pageTitle="Projects we have complteted are listed below">
       {
         data.allMdx.nodes.map(node => (
-          <article key={node.id}>
-            <h2>
-              <Link to={`/projects/${node.frontmatter.slug}`}>
+          <article key={node.id} className={article}>
+            <h2 >
+              <Link to={`/projects/${node.frontmatter.slug}`} className={page}>
                 {node.frontmatter.title}
               </Link>
             </h2>
-            <p>Posted: {node.frontmatter.date}</p>
+            <p className={complDate}>Completion date: {node.frontmatter.date}</p>
           </article>
         ))
       }
@@ -38,6 +41,6 @@ export const query = graphql`
   }
 `
 
-export const Head = () => <Seo title="My Blog Posts" />
+export const Head = () => <Seo title="Projects we have completed" />
 
 export default BlogPage

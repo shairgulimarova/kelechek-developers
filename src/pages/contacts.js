@@ -1,11 +1,12 @@
+
 import * as React from 'react'
 import Layout from '../components/layout'
 import Seo from "../components/seo"
 
-const AboutPage = () => {
+const Contacts = () => {
   return (
-    <Layout pageTitle="Our Team">
-      <p>When we code, day lasts logner than century!</p>
+    <Layout pageTitle="Our Contacts">
+      <p>You can find us everywhere! </p>
     </Layout>
   )
 }
@@ -13,4 +14,4 @@ const AboutPage = () => {
 
 export const Head = () => <Seo title="About Me" />
 
-export default AboutPage
+export default Contacts
